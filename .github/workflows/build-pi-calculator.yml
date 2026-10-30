@@ -1,0 +1,30 @@
+name: Build Pi Calculator
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "projects/pi_calculator/**"
+      - "pytoolbox/pi.py"
+      - ".github/workflows/build-pi-calculator.yml"
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install build dependency
+        run: python -m pip install -r projects/pi_calculator/requirements-build.txt
+      - name: Build standalone executable
+        run: python -m PyInstaller --noconfirm --clean --onefile --windowed --name PiCalculator --paths . projects/pi_calculator/main.py
+      - name: Upload executable
+        uses: actions/upload-artifact@v4
+        with:
+          name: PiCalculator-Windows
+          path: dist/PiCalculator.exe
+          if-no-files-found: error
