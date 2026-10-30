@@ -44,6 +44,12 @@ print(clamp(120, 0, 100))
 print(is_email("hello@example.com"))
 ```
 
+## Standalone desktop project
+
+A separate graphical pi calculator is available in [projects/pi_calculator](projects/pi_calculator/). It lets you enter the number of decimal places, calculate π, and copy the result. See its README for instructions to build a Windows `.exe` that runs without a Python installation.
+
+The GitHub Actions workflow **Build Pi Calculator** can also build the Windows executable and upload it as a downloadable workflow artifact.
+
 ## Run tests
 
 ```bash
