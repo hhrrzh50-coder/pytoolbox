@@ -2,6 +2,7 @@ import unittest
 from datetime import date
 
 from pytoolbox import (
+    calculate_pi,
     clamp,
     days_between,
     deduplicate,
@@ -17,6 +18,10 @@ from pytoolbox import (
 
 
 class ToolboxTests(unittest.TestCase):
+    def test_pi_calculation(self):
+        self.assertEqual(calculate_pi(10), "3.1415926536")
+        self.assertEqual(calculate_pi(0), "3")
+
     def test_random_helpers(self):
         password = random_password(20, symbols=True)
         self.assertEqual(len(password), 20)
