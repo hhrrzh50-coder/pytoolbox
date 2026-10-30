@@ -20,7 +20,7 @@ ArchitecturesInstallIn64BitMode=x64
 UninstallDisplayIcon={app}\{#AppExeName}
 
 [Files]
-Source: "dist\{#AppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\..\dist\{#AppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
 Name: "{group}\{#AppName}"; Filename: "{app}\{#AppExeName}"
