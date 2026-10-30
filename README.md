@@ -1,11 +1,14 @@
 # pytoolbox
 
-A small collection of practical, dependency-free Python utilities for everyday projects.
+**A fun Python toolbox for calculating pi (π) and exploring handy utilities.**
+
+Calculate π to a chosen number of decimal places with the Chudnovsky series, or use the included helpers for text, files, time, math, randomness, and validation.
 
 ## Features
 
-- **Random helpers** — cryptographically secure password generation and random choice.
-- **Text helpers** — stable de-duplication, URL slug generation, and truncation.
+- **Pi calculator** — calculate π to a chosen number of decimal places.
+- **Random helpers** — secure password generation and random choice.
+- **Text helpers** — de-duplication, URL slug generation, and truncation.
 - **File helpers** — UTF-8 text and JSON read/write functions.
 - **Time helpers** — Unix timestamp conversion and date distance.
 - **Math helpers** — clamp, mean, and median.
@@ -19,6 +22,17 @@ Python 3.10 or newer is required.
 python -m pip install .
 ```
 
+## Calculate pi
+
+```python
+from pytoolbox import calculate_pi
+
+print(calculate_pi(50))
+# 3.14159265358979323846264338327950288419716939937511
+```
+
+The result is returned as a string to preserve precision.
+
 ## Quick start
 
 ```python
@@ -28,15 +42,6 @@ print(random_password(18, symbols=True))
 print(slugify("Hello, Python World!"))
 print(clamp(120, 0, 100))
 print(is_email("hello@example.com"))
-```
-
-File helpers can be imported from their module:
-
-```python
-from pytoolbox.file_tools import read_json, write_json
-
-write_json("data/settings.json", {"theme": "dark"})
-settings = read_json("data/settings.json")
 ```
 
 ## Run tests
