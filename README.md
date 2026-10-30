@@ -2,7 +2,19 @@
 
 **A fun Python toolbox for calculating pi (π) and exploring handy utilities.**
 
+[![Build Pi Calculator](https://github.com/hhrrzh50-coder/pytoolbox/actions/workflows/build-pi-calculator.yml/badge.svg)](https://github.com/hhrrzh50-coder/pytoolbox/actions/workflows/build-pi-calculator.yml)
+[![Latest Release](https://img.shields.io/github/v/release/hhrrzh50-coder/pytoolbox?display_name=tag)](https://github.com/hhrrzh50-coder/pytoolbox/releases/latest)
+[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](LICENSE)
+
 Calculate π to a chosen number of decimal places with the Chudnovsky series, or use the included helpers for text, files, time, math, randomness, and validation.
+
+## Downloads and project links
+
+- **[Download the Windows Pi Calculator](https://github.com/hhrrzh50-coder/pytoolbox/releases/latest)** — get the latest published Windows installer or portable build from GitHub Releases.
+- **[All releases](https://github.com/hhrrzh50-coder/pytoolbox/releases)** — browse version history and release notes.
+- **[GitHub Packages](https://github.com/users/hhrrzh50-coder/packages?repo_name=pytoolbox)** — view packages associated with this repository, if any are published.
+
+> The Windows executable and installer are distributed through **GitHub Releases**. GitHub Packages is intended for supported package registries, so it is not used as a general file host for Windows executables.
 
 ## Features
 
@@ -46,9 +58,9 @@ print(is_email("hello@example.com"))
 
 ## Standalone desktop project
 
-A separate graphical pi calculator is available in [projects/pi_calculator](projects/pi_calculator/). It lets you enter the number of decimal places, calculate π, and copy the result. See its README for instructions to build a Windows `.exe` that runs without a Python installation.
+A separate graphical pi calculator is available in [projects/pi_calculator](projects/pi_calculator/). It lets you enter the number of decimal places, calculate π, and copy the result. See its README for instructions to build a Windows executable that runs without a Python installation.
 
-The GitHub Actions workflow **Build Pi Calculator** can also build the Windows executable and upload it as a downloadable workflow artifact.
+The GitHub Actions workflow **Build Pi Calculator** can build the Windows executable and upload it as a downloadable workflow artifact. For end-user downloads, publish the installer and portable build as assets in [GitHub Releases](https://github.com/hhrrzh50-coder/pytoolbox/releases).
 
 ## Run tests
 
